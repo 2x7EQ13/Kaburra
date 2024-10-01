@@ -5,7 +5,7 @@ Kaburra is a project that supports phishing attack testing.
 Its main purpose is to assess the awareness level of personnel within companies and organizations.
 
 It helps system managers evaluate after conducting training courses on social engineering awareness. The emails and fake malware are designed to resemble the techniques currently used by ransomware gangs and APT groups.
-All activities take place in a sandbox, and **you should also work with the SysAdmin and Security Team before proceeding.**
+All activities take place in a controlled private environment, helping to ensure that the email information of personnel is not exposed. And **you should also work with the SysAdmin and Security Team before proceeding.**
 
 _Kaburra is derived from Kookaburra, a type of kingfisher that does not eat fish_
 
