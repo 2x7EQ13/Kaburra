@@ -5,45 +5,47 @@ Kaburra is a project that supports phishing attack testing.
 Its main purpose is to assess the awareness level of personnel within companies and organizations.
 
 It helps system managers evaluate after conducting training courses on social engineering awareness. The emails and fake malware are designed to resemble the techniques currently used by ransomware gangs and APT groups.
-All activities take place in a sandbox, and **you should also work with the SysAdmin before proceeding.**
+All activities take place in a sandbox, and **you should also work with the SysAdmin and Security Team before proceeding.**
 
 _Kaburra is derived from Kookaburra, a type of kingfisher that does not eat fish_
 
 ## Main functions
 
-**Use available phishing email templates or create your own through Ms Word, and send them to one or multiple targets with one click.**
+  * Use ~~available phishing email templates~~ or create your own through Ms Word, and send them to one or multiple targets with one click.
 
-**Track which emails are opened and which attachments are executed.**
+  * Track which emails are opened and which attachments are executed.
 
-**Support statistics to assess the overall level of awareness.**
-
-## Types of attachments:
-
-**1.** Ms Word .doc file with VBA macros.
-
-**2.** LNK Shortcut - PDF icon
-
-**3.** Ms Word Exe Side Loading - With Digital Signature
-
-**4.** PDF Reader Exe Side Loading - With Digital Signature
+  * **Support statistics to assess the overall level of awareness.**
 
 **PE uses SparringRAT:** [https://github.com/2x7EQ13/SparringRAT]
+
+## How to create HTML emails with MS Word
+
+1. Use MS Word to compose the email body content just like a regular document: with text, images, etc.
+2. File ==> Save As ==> Save As Type: **Web Page, Filtered**
+3. Use **Kaburra** to open this file; it will automatically convert the img tags to base64 for display in the email body.
+
+_MS Word will create a folder with the same name as the saved file; this folder contains the media necessary for the HTML file. If you move the file elsewhere, always remember to copy both._
+
+_If you have difficulty creating a suitable email for testing, you can contact me at **2x7eq13@proton.me**. I can support you in creating an email that fits the environment you want to test. Please use your company email so I can verify that you work for that place._
 
 ## Installation:
 
 **Server:**
 
-Public server with a domain that has verified SSL. Use Let's Encrypt if you want it for free.
+Public server with python3 and a domain that has verified SSL. _Use Let's Encrypt if you want it for free._
 
-Upload the Webserver folder to the server, replacing server-cert.crt and server-key.key with the cert/key pair obtained when registering with Let's Encrypt.
+Upload the Webserver folder to the server, replacing **server-cert.crt** and **server-key.key** with the **cert/key** pair obtained when registering with Let's Encrypt.
 
-**cd Webserver**
+ ```console
+  sudo apt-get update
+  sudo apt install python3
+  cd Webserver
+  pip3 install httpserver
+  sudo python3 websvr.py
+ ```
 
-**pip3 install httpserver**
-
-**sudo python3 websvr.py**
-
-## Admin
+**Admin**
 
 Download and Install Webview2 Runtime: this is for mail preview before send.
 
@@ -53,11 +55,11 @@ Download and Install Webview2 Runtime: this is for mail preview before send.
 
 [https://dotnet.microsoft.com/en-us/download/dotnet/6.0]
 
-**Run Kaburra.exe**
+1.  Run Kaburra.exe
 
-**Fill Sender Setting info and "Check"**
+2.  Fill Sender Setting info and "Check"
 
-**Fill Payload Setting and "Send"**
+3.  Fill Payload Setting and "Send"
 
 # Demo
 
