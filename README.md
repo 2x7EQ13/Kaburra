@@ -1,6 +1,6 @@
 ![file_small](https://github.com/user-attachments/assets/383219d3-1bac-4d8f-8f1b-2047a7a9d92e)
 
-Kaburra is a project that supports phishing attack testing.
+Kaburra is a project that supports spear-phishing attack testing, focus on enterprises.
 
 Its main purpose is to assess the awareness level of personnel within companies and organizations.
 
